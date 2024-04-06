@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>Counter-20240323-175553</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet v0.13.12, Ubuntu 22.04.2 LTS (Jammy Jellyfish) WSL
+12th Gen Intel Core i7-1260P, 1 CPU, 16 logical and 8 physical cores
+.NET SDK 7.0.117
+  [Host]     : .NET 7.0.17 (7.0.1724.12101), X64 RyuJIT AVX2
+  DefaultJob : .NET 7.0.17 (7.0.1724.12101), X64 RyuJIT AVX2
+</code></pre>
+<pre><code></code></pre>
+
+<table>
+<thead><tr><th>Method      </th><th>MaxConcurrentThreads</th><th>Mean</th><th>Error</th><th>StdDev</th>
+</tr>
+</thead><tbody><tr><td>AddWithLock</td><td>8</td><td>505.126 ms</td><td>10.0328 ms</td><td>25.8979 ms</td>
+</tr><tr><td>AddWithInterlocked</td><td>8</td><td>520.803 ms</td><td>10.1269 ms</td><td>17.4685 ms</td>
+</tr><tr><td>AddWithLock</td><td>16</td><td>262.695 ms</td><td>5.2194 ms</td><td>9.9305 ms</td>
+</tr><tr><td>AddWithInterlocked</td><td>16</td><td>257.822 ms</td><td>5.0428 ms</td><td>7.3917 ms</td>
+</tr><tr><td>AddWithLock</td><td>32</td><td>134.613 ms</td><td>2.6483 ms</td><td>3.8819 ms</td>
+</tr><tr><td>AddWithInterlocked</td><td>32</td><td>134.988 ms</td><td>2.6772 ms</td><td>3.1870 ms</td>
+</tr><tr><td>AddWithLock</td><td>64</td><td>72.417 ms</td><td>1.4460 ms</td><td>3.1127 ms</td>
+</tr><tr><td>AddWithInterlocked</td><td>64</td><td>68.575 ms</td><td>1.3317 ms</td><td>1.3676 ms</td>
+</tr><tr><td>AddWithLock</td><td>100</td><td>45.649 ms</td><td>0.4809 ms</td><td>0.4016 ms</td>
+</tr><tr><td>AddWithInterlocked</td><td>100</td><td>49.167 ms</td><td>0.9739 ms</td><td>1.4872 ms</td>
+</tr><tr><td>AddWithLock</td><td>2000</td><td>9.576 ms</td><td>0.1750 ms</td><td>0.2395 ms</td>
+</tr><tr><td>AddWithInterlocked</td><td>2000</td><td>11.943 ms</td><td>0.6215 ms</td><td>1.8326 ms</td>
+</tr></tbody></table>
+</body>
+</html>
