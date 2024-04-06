@@ -1,6 +1,7 @@
 using System.Text;
 using System.Text.RegularExpressions;
 using BenchmarkDotNet.Attributes;
+using BenchmarkDotNet.Diagnosers;
 namespace Benchmark
 {
 
@@ -10,7 +11,10 @@ namespace Benchmark
         public static partial Regex SydPrefix();
     }
 
-    public class MatchStrings
+    [MemoryDiagnoser]
+    [HardwareCounters(
+        HardwareCounter.BranchMispredictions,
+        HardwareCounter.BranchInstructions)]    public class MatchStrings
     {
         public int NumbersOfSegments = 100;
         public int NumberOfIterations = 5;

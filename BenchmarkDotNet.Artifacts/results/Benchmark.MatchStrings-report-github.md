@@ -4,20 +4,20 @@ BenchmarkDotNet v0.13.12, Ubuntu 22.04.2 LTS (Jammy Jellyfish) WSL
 12th Gen Intel Core i7-1260P, 1 CPU, 16 logical and 8 physical cores
 .NET SDK 7.0.117
   [Host]     : .NET 7.0.17 (7.0.1724.12101), X64 RyuJIT AVX2
-  Job-AAOTNE : .NET 7.0.17 (7.0.1724.12101), X64 RyuJIT AVX2
+  Job-WBMJBZ : .NET 7.0.17 (7.0.1724.12101), X64 RyuJIT AVX2
 
 IterationCount=100  
 
 ```
-| Method                     | input                | Mean     | Error     | StdDev    |
-|--------------------------- |--------------------- |---------:|----------:|----------:|
-| **UniqueOptionSetsUsingRegex** | **_CQQ(...)LVFJ [2132]** | **4.656 μs** | **0.0413 μs** | **0.1211 μs** |
-| **UniqueOptionSetsUsingRegex** | **_KZU(...)O_KJ [2165]** | **8.748 μs** | **0.0991 μs** | **0.2890 μs** |
-| **UniqueOptionSetsUsingSpan**  | **_L_J(...)QQNO [2180]** | **2.184 μs** | **0.0272 μs** | **0.0798 μs** |
-| **UniqueOptionSetsUsingSpan**  | **BCOJ(...)ZPLN [2144]** | **1.791 μs** | **0.0139 μs** | **0.0404 μs** |
-| **UniqueOptionSetsUsingRegex** | **LCIP(...)PPOV [2168]** | **8.549 μs** | **0.0833 μs** | **0.2455 μs** |
-| **UniqueOptionSetsUsingSpan**  | **OHQD(...)_U_O [2174]** | **2.199 μs** | **0.0179 μs** | **0.0527 μs** |
-| **UniqueOptionSetsUsingRegex** | **QKDR(...)CTI_ [2156]** | **7.551 μs** | **0.0789 μs** | **0.2290 μs** |
-| **UniqueOptionSetsUsingRegex** | **syd_(...)BRWL [2168]** | **8.640 μs** | **0.0849 μs** | **0.2477 μs** |
-| **UniqueOptionSetsUsingSpan**  | **sydN(...)HYKC [2195]** | **2.414 μs** | **0.0199 μs** | **0.0583 μs** |
-| **UniqueOptionSetsUsingSpan**  | **Z_GX(...)SAIB [2162]** | **2.023 μs** | **0.0226 μs** | **0.0664 μs** |
+| Method                     | input                | Mean     | Error     | StdDev    | Gen0   | Gen1   | Allocated |
+|--------------------------- |--------------------- |---------:|----------:|----------:|-------:|-------:|----------:|
+| **UniqueOptionSetsUsingRegex** | **AELH(...)LCJL [2153]** | **7.076 μs** | **0.0571 μs** | **0.1665 μs** | **1.3199** | **0.0534** |  **12.18 KB** |
+| **UniqueOptionSetsUsingSpan**  | **BIPV(...)UQZ_ [2162]** | **2.044 μs** | **0.0170 μs** | **0.0490 μs** | **0.3052** |      **-** |   **2.83 KB** |
+| **UniqueOptionSetsUsingRegex** | **BLWA(...)ZON_ [2150]** | **6.730 μs** | **0.0475 μs** | **0.1392 μs** | **1.1749** | **0.0458** |  **10.85 KB** |
+| **UniqueOptionSetsUsingRegex** | **DYNU(...)FUHT [2153]** | **6.905 μs** | **0.0557 μs** | **0.1632 μs** | **1.3199** | **0.0534** |  **12.18 KB** |
+| **UniqueOptionSetsUsingSpan**  | **G_PT(...)ZMHZ [2150]** | **1.819 μs** | **0.0137 μs** | **0.0400 μs** | **0.1945** |      **-** |    **1.8 KB** |
+| **UniqueOptionSetsUsingRegex** | **HEE_(...)TZOS [2153]** | **7.066 μs** | **0.1371 μs** | **0.3955 μs** | **1.3199** | **0.0534** |  **12.18 KB** |
+| **UniqueOptionSetsUsingSpan**  | **NQNC(...)_ZIJ [2156]** | **1.955 μs** | **0.0213 μs** | **0.0621 μs** | **0.2937** |      **-** |    **2.7 KB** |
+| **UniqueOptionSetsUsingSpan**  | **PRQR(...)HNVD [2189]** | **2.335 μs** | **0.0224 μs** | **0.0646 μs** | **0.3662** | **0.0038** |   **3.39 KB** |
+| **UniqueOptionSetsUsingSpan**  | **VZNP(...)J_VN [2156]** | **1.975 μs** | **0.0161 μs** | **0.0465 μs** | **0.2937** |      **-** |    **2.7 KB** |
+| **UniqueOptionSetsUsingRegex** | **YAPU(...)NOVQ [2171]** | **9.292 μs** | **0.0887 μs** | **0.2603 μs** | **1.6785** | **0.0916** |  **15.51 KB** |

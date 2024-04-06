@@ -2,7 +2,7 @@
 <html lang='en'>
 <head>
 <meta charset='utf-8' />
-<title>Benchmark.MatchStrings-20240406-141807</title>
+<title>Benchmark.MatchStrings-20240406-144626</title>
 
 <style type="text/css">
 	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
@@ -17,24 +17,24 @@ BenchmarkDotNet v0.13.12, Ubuntu 22.04.2 LTS (Jammy Jellyfish) WSL
 12th Gen Intel Core i7-1260P, 1 CPU, 16 logical and 8 physical cores
 .NET SDK 7.0.117
   [Host]     : .NET 7.0.17 (7.0.1724.12101), X64 RyuJIT AVX2
-  Job-AAOTNE : .NET 7.0.17 (7.0.1724.12101), X64 RyuJIT AVX2
+  Job-WBMJBZ : .NET 7.0.17 (7.0.1724.12101), X64 RyuJIT AVX2
 </code></pre>
 <pre><code>IterationCount=100  
 </code></pre>
 
 <table>
-<thead><tr><th>Method              </th><th>input         </th><th>Mean</th><th>Error</th><th>StdDev</th>
+<thead><tr><th>Method              </th><th>input         </th><th>Mean</th><th>Error</th><th>StdDev</th><th>Gen0</th><th>Gen1</th><th>Allocated</th>
 </tr>
-</thead><tbody><tr><td>UniqueOptionSetsUsingRegex</td><td>_CQQ(...)LVFJ [2132]</td><td>4.656 &mu;s</td><td>0.0413 &mu;s</td><td>0.1211 &mu;s</td>
-</tr><tr><td>UniqueOptionSetsUsingRegex</td><td>_KZU(...)O_KJ [2165]</td><td>8.748 &mu;s</td><td>0.0991 &mu;s</td><td>0.2890 &mu;s</td>
-</tr><tr><td>UniqueOptionSetsUsingSpan</td><td>_L_J(...)QQNO [2180]</td><td>2.184 &mu;s</td><td>0.0272 &mu;s</td><td>0.0798 &mu;s</td>
-</tr><tr><td>UniqueOptionSetsUsingSpan</td><td>BCOJ(...)ZPLN [2144]</td><td>1.791 &mu;s</td><td>0.0139 &mu;s</td><td>0.0404 &mu;s</td>
-</tr><tr><td>UniqueOptionSetsUsingRegex</td><td>LCIP(...)PPOV [2168]</td><td>8.549 &mu;s</td><td>0.0833 &mu;s</td><td>0.2455 &mu;s</td>
-</tr><tr><td>UniqueOptionSetsUsingSpan</td><td>OHQD(...)_U_O [2174]</td><td>2.199 &mu;s</td><td>0.0179 &mu;s</td><td>0.0527 &mu;s</td>
-</tr><tr><td>UniqueOptionSetsUsingRegex</td><td>QKDR(...)CTI_ [2156]</td><td>7.551 &mu;s</td><td>0.0789 &mu;s</td><td>0.2290 &mu;s</td>
-</tr><tr><td>UniqueOptionSetsUsingRegex</td><td>syd_(...)BRWL [2168]</td><td>8.640 &mu;s</td><td>0.0849 &mu;s</td><td>0.2477 &mu;s</td>
-</tr><tr><td>UniqueOptionSetsUsingSpan</td><td>sydN(...)HYKC [2195]</td><td>2.414 &mu;s</td><td>0.0199 &mu;s</td><td>0.0583 &mu;s</td>
-</tr><tr><td>UniqueOptionSetsUsingSpan</td><td>Z_GX(...)SAIB [2162]</td><td>2.023 &mu;s</td><td>0.0226 &mu;s</td><td>0.0664 &mu;s</td>
+</thead><tbody><tr><td>UniqueOptionSetsUsingRegex</td><td>AELH(...)LCJL [2153]</td><td>7.076 &mu;s</td><td>0.0571 &mu;s</td><td>0.1665 &mu;s</td><td>1.3199</td><td>0.0534</td><td>12.18 KB</td>
+</tr><tr><td>UniqueOptionSetsUsingSpan</td><td>BIPV(...)UQZ_ [2162]</td><td>2.044 &mu;s</td><td>0.0170 &mu;s</td><td>0.0490 &mu;s</td><td>0.3052</td><td>-</td><td>2.83 KB</td>
+</tr><tr><td>UniqueOptionSetsUsingRegex</td><td>BLWA(...)ZON_ [2150]</td><td>6.730 &mu;s</td><td>0.0475 &mu;s</td><td>0.1392 &mu;s</td><td>1.1749</td><td>0.0458</td><td>10.85 KB</td>
+</tr><tr><td>UniqueOptionSetsUsingRegex</td><td>DYNU(...)FUHT [2153]</td><td>6.905 &mu;s</td><td>0.0557 &mu;s</td><td>0.1632 &mu;s</td><td>1.3199</td><td>0.0534</td><td>12.18 KB</td>
+</tr><tr><td>UniqueOptionSetsUsingSpan</td><td>G_PT(...)ZMHZ [2150]</td><td>1.819 &mu;s</td><td>0.0137 &mu;s</td><td>0.0400 &mu;s</td><td>0.1945</td><td>-</td><td>1.8 KB</td>
+</tr><tr><td>UniqueOptionSetsUsingRegex</td><td>HEE_(...)TZOS [2153]</td><td>7.066 &mu;s</td><td>0.1371 &mu;s</td><td>0.3955 &mu;s</td><td>1.3199</td><td>0.0534</td><td>12.18 KB</td>
+</tr><tr><td>UniqueOptionSetsUsingSpan</td><td>NQNC(...)_ZIJ [2156]</td><td>1.955 &mu;s</td><td>0.0213 &mu;s</td><td>0.0621 &mu;s</td><td>0.2937</td><td>-</td><td>2.7 KB</td>
+</tr><tr><td>UniqueOptionSetsUsingSpan</td><td>PRQR(...)HNVD [2189]</td><td>2.335 &mu;s</td><td>0.0224 &mu;s</td><td>0.0646 &mu;s</td><td>0.3662</td><td>0.0038</td><td>3.39 KB</td>
+</tr><tr><td>UniqueOptionSetsUsingSpan</td><td>VZNP(...)J_VN [2156]</td><td>1.975 &mu;s</td><td>0.0161 &mu;s</td><td>0.0465 &mu;s</td><td>0.2937</td><td>-</td><td>2.7 KB</td>
+</tr><tr><td>UniqueOptionSetsUsingRegex</td><td>YAPU(...)NOVQ [2171]</td><td>9.292 &mu;s</td><td>0.0887 &mu;s</td><td>0.2603 &mu;s</td><td>1.6785</td><td>0.0916</td><td>15.51 KB</td>
 </tr></tbody></table>
 </body>
 </html>
