@@ -7,14 +7,12 @@ namespace Benchmark
 
     partial class MatchRegex
     {
-        [GeneratedRegex("syd([a-zA-Z0-9 _:]+)(,|$)", RegexOptions.IgnoreCase, "en-US")]
-        public static partial Regex SydPrefix();
+[GeneratedRegex(@"syd([a-zA-Z0-9 _:]*)", RegexOptions.IgnoreCase, "en-US")]        public static partial Regex SydPrefix();
     }
 
+    [PerfCollectProfiler]
     [MemoryDiagnoser]
-    [HardwareCounters(
-        HardwareCounter.BranchMispredictions,
-        HardwareCounter.BranchInstructions)]    public class MatchStrings
+    public class MatchStrings
     {
         public int NumbersOfSegments = 100;
         public int NumberOfIterations = 5;
@@ -50,7 +48,7 @@ namespace Benchmark
             while (!remainingInput.IsEmpty)
             {
                 var value = GetNextValue(remainingInput, out remainingInput);
-                if (value.StartsWith(prefix))
+                if (value.StartsWith(prefix, StringComparison.OrdinalIgnoreCase))
                 {
                     values.Add(value[3..].ToString());
                 }
