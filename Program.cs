@@ -3,6 +3,8 @@ using Benchmark;
 using BenchmarkDotNet.Running;
 using System.Threading;
 
+//var matchStrings = new MatchStrings();
+//Console.WriteLine(string.Join(',', matchStrings.UniqueOptionSetsUsingRegex("sydHello,hellovalue,sydcomp,somethingSyd,captureSyd,sydSomethign")));
 BenchmarkRunner.Run<MatchStrings>();
 // var matchStrings = new MatchStrings();
 // foreach (var str in matchStrings.GenerateRandomStrings())

@@ -7,12 +7,13 @@ namespace Benchmark
 
     partial class MatchRegex
     {
-[GeneratedRegex(@"syd([a-zA-Z0-9 _:]*)", RegexOptions.IgnoreCase, "en-US")]        public static partial Regex SydPrefix();
+        [GeneratedRegex("syd([a-zA-Z0-9 _:]+)(,)?", RegexOptions.IgnoreCase | RegexOptions.Singleline)]
+        public static partial Regex SydPrefix();
     }
 
-    [PerfCollectProfiler]
     [MemoryDiagnoser]
-    public class MatchStrings
+
+        public class MatchStrings
     {
         public int NumbersOfSegments = 100;
         public int NumberOfIterations = 5;
